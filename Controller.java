@@ -29,13 +29,12 @@ public class Controller {
         return "Server health is up and running";
     }
     @GetMapping("/names") //run the Endpoint is the method
-    public String[] names(){
+    public ArrayList<String> names(){
         ArrayList<String> names = new ArrayList<>();
         names.add("YARA");
         names.add("NAJD");
         names.add("SEHAM");
         names.add("SARA");
-
-            return names.toArray(new String[0]);
+            return names;
     }
 }
